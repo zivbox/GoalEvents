@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA35C7962179E3DE00BC2858 /* MacrosTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35C7952179E3DE00BC2858 /* MacrosTool.swift */; };
+		DA364794217D72A3002621EC /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA364793217D72A3002621EC /* DateExtension.swift */; };
+		DA364796217D8863002621EC /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA364795217D8863002621EC /* UIColorExtension.swift */; };
+		DA364798217D9806002621EC /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA364797217D9806002621EC /* StringExtension.swift */; };
 		DA569E112174633100FC5472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA569E102174633100FC5472 /* AppDelegate.swift */; };
 		DA569E132174633100FC5472 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA569E122174633100FC5472 /* ViewController.swift */; };
 		DA569E162174633100FC5472 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA569E142174633100FC5472 /* Main.storyboard */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA35C7952179E3DE00BC2858 /* MacrosTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacrosTool.swift; sourceTree = "<group>"; };
+		DA364793217D72A3002621EC /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		DA364795217D8863002621EC /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		DA364797217D9806002621EC /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		DA569E0D2174633100FC5472 /* GoalEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoalEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA569E102174633100FC5472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA569E122174633100FC5472 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +109,10 @@
 			children = (
 				DA569E102174633100FC5472 /* AppDelegate.swift */,
 				DA569E3E217464C200FC5472 /* RootViewController.swift */,
+				DA35C7952179E3DE00BC2858 /* MacrosTool.swift */,
+				DA364793217D72A3002621EC /* DateExtension.swift */,
+				DA364795217D8863002621EC /* UIColorExtension.swift */,
+				DA364797217D9806002621EC /* StringExtension.swift */,
 				DA569E122174633100FC5472 /* ViewController.swift */,
 				DA569E142174633100FC5472 /* Main.storyboard */,
 				DA569E172174633200FC5472 /* Assets.xcassets */,
@@ -259,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA364794217D72A3002621EC /* DateExtension.swift in Sources */,
+				DA364798217D9806002621EC /* StringExtension.swift in Sources */,
 				DA569E132174633100FC5472 /* ViewController.swift in Sources */,
 				DA569E112174633100FC5472 /* AppDelegate.swift in Sources */,
+				DA364796217D8863002621EC /* UIColorExtension.swift in Sources */,
+				DA35C7962179E3DE00BC2858 /* MacrosTool.swift in Sources */,
 				DA569E3F217464C200FC5472 /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +455,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JKFNXU457K;
 				INFOPLIST_FILE = GoalEvents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,6 +474,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JKFNXU457K;
 				INFOPLIST_FILE = GoalEvents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
