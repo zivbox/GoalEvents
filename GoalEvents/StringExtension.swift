@@ -11,7 +11,12 @@ import Foundation
 
 extension String {
     
-    
+    // MARK: 字符串的长度
+    var length: Int {
+        get {
+            return self.count
+        }
+    }
     
     
     
