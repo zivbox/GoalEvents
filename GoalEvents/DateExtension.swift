@@ -9,13 +9,13 @@
 import Foundation
 
 
-public enum UtilsTimeFormat: String {
-    case format_default             = "yyyy/MM/dd HH:mm:ss"
-    case format_yyyyMMddHHmm        = "yyyy/MM/dd HH:mm"
-    case format_yyyyMMdd            = "yyyy/MM/dd"
-    case format_MMddHHmm            = "MM/dd HH:mm"
-    case format_MMdd                = "MM/dd"
-    case format_HHmm                = "HH:mm"
+public struct UtilsTimeFormat {
+    var format_default       : String      = "yyyy/MM/dd HH:mm:ss"
+    var format_yyyyMMddHHmm  : String      = "yyyy/MM/dd HH:mm"
+    var format_yyyyMMdd      : String      = "yyyy/MM/dd"
+    var format_MMddHHmm      : String      = "MM/dd HH:mm"
+    var format_MMdd          : String      = "MM/dd"
+    var format_HHmm          : String      = "HH:mm"
 }
 
 

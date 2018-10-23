@@ -18,6 +18,7 @@ extension UIColor {
      *  e.g. UIColor().utilsColorRGB(r: 13.0, g:37.0, b:25.0)
      */
     public func utilsColorRGB(r: CGFloat, g: CGFloat, b: CGFloat) -> UIColor {
+        
         return UIColor.init(red: r / 255.0,
                             green: g / 255.0,
                             blue: b / 255.0,
@@ -29,6 +30,7 @@ extension UIColor {
      *  e.g. UIColor().utilsColorRGBA(r: 13.0, g:37.0, b:25.0, a:0.5)
      */
     public func utilsColorRGBA(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) -> UIColor {
+        
         return UIColor.init(red: r / 255.0,
                             green: g / 255.0,
                             blue: b / 255.0,
@@ -42,6 +44,7 @@ extension UIColor {
      *  e.g. UIColor().utilsColorHex(h: 0x0054AE)
      */
     public func utilsColorHex(h: UInt) -> UIColor {
+        
         return UIColor.init(red: CGFloat((h & 0xFF0000) >> 16) / 255.0,
                             green: CGFloat((h  & 0x00FF00) >> 8) / 255.0,
                             blue: CGFloat(h & 0x0000FF) / 255.0,
@@ -53,6 +56,7 @@ extension UIColor {
      *  e.g. UIColor().utilsColorHexA(h: 0x0054AE, a: 0.5)
      */
     public func utilsColorHexA(h: UInt, a: CGFloat) -> UIColor {
+        
         return UIColor.init(red: CGFloat((h & 0xFF0000) >> 16) / 255.0,
                             green: CGFloat((h  & 0x00FF00) >> 8) / 255.0,
                             blue: CGFloat(h & 0x0000FF) / 255.0,
@@ -66,6 +70,7 @@ extension UIColor {
      *  e.g. UIColor().utilsColorHexJH(h: "#0054AE")
      */
     public func utilsColorHexJH(h: String) -> UIColor {
+        
         return utilsColorFormHexJH(h: h,
                                    a: 1.0)
     }
@@ -75,6 +80,7 @@ extension UIColor {
      *  e.g. UIColor().utilsColorHexJHA(h: "#0054AE", a: 0.5)
      */
     public func utilsColorHexJHA(h: String, a: CGFloat) -> UIColor {
+        
         return utilsColorFormHexJH(h: h,
                                    a: a)
     }
