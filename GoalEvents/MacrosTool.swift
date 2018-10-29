@@ -57,6 +57,11 @@ public func FontArial(s: CGFloat) -> UIFont {
     return UIFont.init(name: "Arial", size: s) ?? UIFont.init()
 }
 
+public func FontArial2(_ s: CGFloat) -> UIFont {
+    
+    return UIFont.init(name: "Arial", size: s) ?? UIFont.init()
+}
+
 /**
  *  Arial-BoldMT 字体(Arial加粗)
  *  e.g. FontAriBold(s: 13.0)
@@ -67,6 +72,10 @@ public func FontAriBold(s: CGFloat) -> UIFont {
 }
 
 
+public func FontAriBold2(_ s: CGFloat) -> UIFont {
+    
+    return UIFont.init(name: "Arial-BoldMT", size: s) ?? UIFont.init()
+}
 
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA1DB54921801E2C00C96A5D /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1DB54821801E2C00C96A5D /* MainCell.swift */; };
 		DA35C7962179E3DE00BC2858 /* MacrosTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35C7952179E3DE00BC2858 /* MacrosTool.swift */; };
 		DA364794217D72A3002621EC /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA364793217D72A3002621EC /* DateExtension.swift */; };
 		DA364796217D8863002621EC /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA364795217D8863002621EC /* UIColorExtension.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA1DB54821801E2C00C96A5D /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		DA35C7952179E3DE00BC2858 /* MacrosTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacrosTool.swift; sourceTree = "<group>"; };
 		DA364793217D72A3002621EC /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		DA364795217D8863002621EC /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				DA569E102174633100FC5472 /* AppDelegate.swift */,
 				DA569E3E217464C200FC5472 /* RootViewController.swift */,
+				DA1DB54821801E2C00C96A5D /* MainCell.swift */,
 				DA35C7952179E3DE00BC2858 /* MacrosTool.swift */,
 				DA364793217D72A3002621EC /* DateExtension.swift */,
 				DA364795217D8863002621EC /* UIColorExtension.swift */,
@@ -277,6 +280,7 @@
 				DA569E112174633100FC5472 /* AppDelegate.swift in Sources */,
 				DA364796217D8863002621EC /* UIColorExtension.swift in Sources */,
 				DA35C7962179E3DE00BC2858 /* MacrosTool.swift in Sources */,
+				DA1DB54921801E2C00C96A5D /* MainCell.swift in Sources */,
 				DA569E3F217464C200FC5472 /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

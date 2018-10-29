@@ -12,7 +12,22 @@ import UIKit
 class RootViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    fileprivate var tableView: UITableView!
+    fileprivate lazy var dataSource = [String]()
+    fileprivate lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.frame = CGRect(x: 0, y: H(y: 130), width: WinWidth, height: WinHeight - H(y: 130) - NavigationHeight)
+        tableView.backgroundColor = UIColor.white
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
+        
+        tableView.register(MainCell.self, forCellReuseIdentifier: "MainCell")
+        self.automaticallyAdjustsScrollViewInsets = false
+
+        return tableView
+    }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +41,7 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
          * let 用于定义常量，定义完后不能修改。 var 用于定义变量，可以修改。
          */
         let label = UILabel()
-        label.frame = CGRect(x: WinWidth / 2 - 80, y: 25, width: 160, height: 80)
+        label.frame = CGRect(x: WinWidth / 2 - W(x: 80), y: H(y: 25), width: W(x: 160), height: H(y: 80))
         label.textAlignment = NSTextAlignment.center
         label.numberOfLines = 0;
         label.backgroundColor = UIColor().utilsColorHexJHA(h: "#0054ae", a: 0.5)
@@ -58,18 +73,27 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
          print("pop: " + deleos)
          */
         
-        tableView = UITableView()
-        tableView.frame = CGRect(x: 0, y: 130, width: WinWidth, height: WinHeight - 130 - NavigationHeight)
-        tableView.backgroundColor = UIColor.white
-        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        tableView.delegate = self
-        tableView.dataSource = self
+        
+        
+        setDateUpdate()
+        
         self.view.addSubview(tableView)
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
-        self.automaticallyAdjustsScrollViewInsets = false
 
         
+        for index in self.dataSource {
+            
+            print("\(index)")
+        }
+    }
+    
+    
+    /// Description
+    private func setDateUpdate() {
         
+        for index in 0...5 {
+            dataSource.append("Swift \(index + 1)")
+        }
+        print(dataSource)
     }
     
     
@@ -81,30 +105,54 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 15
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return 75.0
+
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let identifier = "UITableViewCell"
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: identifier) as! UITableViewCell
+        let identifier = "MainCell"
+        let cell: MainCell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! MainCell
         
-        cell.textLabel?.text = String(indexPath.row)
         if indexPath.row % 2 == 0 {
             cell.backgroundColor = UIColor().utilsColorHex(h: 0xf3f3f3)
         } else {
             cell.backgroundColor = UIColor.clear
         }
         
+        let label = UILabel()
+        label.frame = CGRect(x: W(x: 30), y: H(y: 5), width: W(x: 160), height: H(y: 20))
+        label.textAlignment = NSTextAlignment.left
+        label.numberOfLines = 0;
+        label.backgroundColor = UIColor.clear
+        label.font = FontArial2(13)
+        label.text = dataSource[indexPath.row]
+        label.numberOfLines = 0
+        label.preferredMaxLayoutWidth = W(x: 160)
+        cell.addSubview(label)
+        
+        let label2 = UILabel()
+        label2.frame = CGRect(x: W(x: 30), y: H(y: 25), width: WinWidth - W(x: 60), height: H(y: 45))
+        label2.textAlignment = NSTextAlignment.left
+        label2.numberOfLines = 0;
+        label2.backgroundColor = UIColor().utilsColorHexJHA(h: "#0054ae", a: 0.5)
+        label2.font = FontAriBold(s: 13)
+        label2.text = "当前 Row: \(indexPath.row)"
+        label2.numberOfLines = 0
+        label2.preferredMaxLayoutWidth = W(x: 160)
+        cell.addSubview(label2)
+        
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
     
     
     
